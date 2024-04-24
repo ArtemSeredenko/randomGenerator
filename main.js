@@ -10,6 +10,18 @@ const projectMembers = [
   'Julia Haretonchuk',
 ];
 
+const sectionNames = [
+  'Header', // 1
+  'Hero', // 2
+  'About me', // 3
+  'Benefits', // 4
+  'Projects', // 5
+  'FAQ', // 6
+  'Covers', // 7
+  'Reviews', // 8
+  'Work together', // 9
+];
+
 function initList() {
   const listElement = document.querySelector('#studentList');
   listElement.innerHTML = '';
@@ -34,7 +46,8 @@ function assignNumbers() {
 
   projectMembers.forEach((member, index) => {
     const memberElement = document.querySelector(`#member-${index}`);
-    memberElement.textContent = `${member} - ${numbers[index]}`;
+    const sectionText = sectionNames[numbers[index] - 1];
+    memberElement.textContent = `${member} - ${sectionText}`;
   });
 }
 
