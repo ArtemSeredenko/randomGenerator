@@ -55,10 +55,10 @@ button:active {
 #beaver {
   position: fixed;
   rotate: 45deg;
-  left: -150px; /* начальное положение, скрыто за левым краем экрана */
-  top: 50%; /* Центрируем по вертикали */
-  transform: translateY(-50%); /* Центрирование по вертикали */
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 150px;
-  transition: left 1s ease, opacity 0.5s ease; /* Анимируем движение влево и прозрачность */
-  opacity: 0; /* Начальная прозрачность */
+  transition: left 1s ease, opacity 0.5s ease;
+  opacity: 0;
 }
