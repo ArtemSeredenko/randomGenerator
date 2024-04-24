@@ -58,4 +58,23 @@ function shuffleArray(array) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initList);
+document.addEventListener('DOMContentLoaded', () => {
+  initList();
+  setTimeout(() => {
+    const beaver = document.getElementById('beaver');
+    beaver.style.opacity = '1'; // Делаем бобра видимым
+    beaver.style.left = '5px'; // Начинаем перемещение к центру
+
+    setTimeout(() => {
+      beaver.style.left = '-150px'; // Плавное перемещение обратно за край экрана
+      beaver.style.opacity = '0'; // Плавное исчезновение
+      beaver.addEventListener(
+        'transitionend',
+        () => {
+          beaver.style.display = 'none'; // Полное скрытие после завершения анимации
+        },
+        { once: true }
+      );
+    }, 2000); // Бобер будет виден в течение 5 секунд
+  }, 3000); // Задержка перед первым появлением
+});
